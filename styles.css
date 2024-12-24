@@ -1,0 +1,264 @@
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Fondo navideño */
+body {
+  background-image: url('fondonavidad.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 450px;
+  width: 95%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+.hide {
+  display: none;
+}
+
+/* Logo del Gym con borde navideño */
+.gym-logo {
+  width: 160px;
+  height: auto;
+  margin: -100px auto 30px;
+  display: block;
+  
+  border-radius: 5%;
+  padding: 40px;
+  
+}
+
+/* Título principal */
+h1 {
+  font-size: 24px;
+  margin-bottom: 35px;
+  color: #ffcccb;
+}
+
+/* Frase de bienvenida */
+.welcome-message {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Botones */
+.btn {
+  background-color: #d71114;
+  border: none;
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+  background-color: #938c8b;
+  transform: scale(1.05);
+}
+
+/* Contenedor de preguntas */
+#question-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
+}
+
+/* Cronómetro y puntaje */
+#score-timer-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Resultados */
+#result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+
+/* Efecto de nieve */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  color: #fff;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999;
+  animation: snowFall 10s linear infinite;
+}
+
+/* Animación de caída de nieve */
+@keyframes snowFall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .gym-logo {
+    width: 100px;
+  }
+}
+.correct {
+  background-color: #2ecc71; /* Verde */
+  color: #fff;
+}
+
+.wrong {
+  background-color: #e74c3c; /* Rojo */
+  color: #fff;
+}
+#share-btn {
+  background-color: #3498db; /* Azul */
+  color: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#share-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+/* Estilo para el popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.popup-content h3 {
+  font-size: 24px;
+  color: #d71114;
+  margin-bottom: 15px;
+}
+
+.popup-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#popup-close {
+  background: #d71114;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#popup-close:hover {
+  background: #940d0e;
+}
+
+.hide {
+  display: none;
+}
+/* Estilo para el logo de Instagram */
+.social-logo {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.social-logo:hover {
+  transform: scale(1.1);
+}
+/* Enlaces Sociales */
+.social-links {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.social-links a {
+  color: #2e8b57;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}

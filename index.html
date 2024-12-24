@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos Curiosos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HTML Ajustado -->
+  <div class="container">
+    <!-- Logo del Gym -->
+    <img src="arbol-de-navidad.png" alt="Logo del Gym" class="gym-logo">
+  
+    <h1>Veamos que tanto sabes de la Navidad?</h1>
+    
+    <!-- Frase Motivacional -->
+    <p class="welcome-message">"¿Jugas?"</p>
+  
+    <div id="game" class="game">
+      <div id="question-container" class="hide">
+        <div id="score-timer-container">
+          <p>Puntaje: <span id="score">0</span></p>
+          <p>Tiempo: <span id="timer">10</span> s</p>
+        </div>
+  
+        <div id="question-box">
+          <h2 id="question">Si estás listo, mandale</h2>
+        </div>
+  
+        <div id="answer-buttons" class="btn-grid"></div>
+  
+        <button id="next-btn" class="btn hide">Siguiente</button>
+      </div>
+  
+      <button id="start-btn" class="btn">Comenzar Juego</button>
+    
+
+    </div>
+  
+    <!-- Enlaces Sociales -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/capuzzi_ernesto/" target="_blank"rel="noopener noreferrer">
+        <img src="instagram (2).png" alt="Instagram" class="social-logo"></a>
+    </div>
+
+    
+  </div>
+
+  <div id="result-container" class="hide">
+    <h2 id="final-score-message">¡!</h2> <!-- Mensaje del puntaje -->
+    
+    <button id="share-btn" class="btn hide">Descargar Puntaje</button> <!-- Botón de compartir -->
+  </div>
+  <div id="popup" class="popup hide">
+    <div class="popup-content">
+      <h3 id="popup-title">Respuesta</h3>
+      <p id="popup-message"></p>
+      <button id="popup-close" class="btn">Cerrar</button>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
